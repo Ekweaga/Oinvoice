@@ -1,3 +1,12 @@
+button{
+    background-color: #10374A;
+    color:white;
+    padding:10px;
+    border:none;
+    outline:none;
+    border-radius: 30px;
+}
+
 .header{
     background-color: #E2E9EC;
     height:500px;
@@ -52,10 +61,108 @@ font-size:18px;
 .benefitsContainer{
     width:100%;
     background-color: #10374A;
-    height:500px;
+    height:300px;
     color:white;
+    padding-top:100px;
+    display:flex;
+   
+   
+   
 }
+.benefitsContainer .benefits{
+    display:flex;
+   gap:20px;
+   
+    width:80%;
+    margin-left:auto;
+    margin-right: auto;
+   
+}
+.workContainer{
+    background-color: #E2E9EC;
+    height:600px;
+    padding-top:50px;
+}
+.does{
+    margin:20px;
+    padding:20px;
+}
+.does h1{
+    font-size:25px;
+}
+.does p{
+    font-size:16px;
+    letter-spacing: 0.1rem;
+}
+.workContainer .works{
+    display:flex;
+   width:80%;
+   margin:auto;
+   gap:20px;
+}
+.works p{
+    font-size:13px;
+    width:250px;
+}
+.work1 , .work2 , .work3{
+    height:250px;
+    width:300px;
+    color:white;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left:20px;
+    padding-right:20px;
+}
+.work1{
+    background-color:#10374A; ;
+}
+.work2{
+    background:#FF2D55;
+}
+.work3{
+    background-color: rgb(31, 31, 122);
+}
+.signupContainer{
+    background-color: #E2E9EC;
+    height:500px;
+    padding-top:100px;
+}
+.signupContainer h5{
+    font-weight: 700;
+    font-size:30px;
+}
+.signupContainer button{
+    width:200px;
+}
+.customersContainer{
+height:350px;
+padding:30px;
+}
+.customersContainer .customers{
+    display:flex;
+    align-items: center;
+    width:50%;
+    margin:auto;
+}
+
 @media screen and (max-width:768px) {
+    .customersContainer{
+        height:unset;
+    }
+    .customersContainer .customers{
+        display:flex;
+        align-items: center;
+        width:50%;
+        margin:auto;
+        flex-direction: column;
+    }
+    .signupContainer h5{
+        font-weight: 700;
+        font-size:20px;
+        padding:20px;
+    }
     .header .headerContainer{
         display:flex;
         align-items: center;
@@ -88,5 +195,41 @@ font-size:18px;
          width:500px;
          height:300px;
      
-     }}
+     }
+     .benefitsContainer{
+        width:100%;
+        background-color: #10374A;
+        height:800px;
+        color:white;
+        padding-top:0px;
+        display:flex;
+       
+       
+       
+    }
+     .benefitsContainer .benefits{
+        display:flex;
+       gap:20px;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+        width:80%;
+        margin-left:auto;
+        margin-right: auto;
+       
+    }
+    .workContainer .works{
+        display:flex;
+       width:80%;
+       flex-direction: column-reverse;
+       margin:auto;
+       gap:20px;
+       color:white;
+    }
+    .workContainer{
+        background-color: #E2E9EC;
+        height:unset;
+        padding-top:20px;
+    }
+    }
 
