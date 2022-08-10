@@ -25,7 +25,7 @@ function Home() {
 
             <div className="headerimg">
                         <div>
-                            <img src={imginvoice}/>
+                            <img src={imginvoice} alt="imgvoice"/>
                         </div>
             </div>
         </div>
