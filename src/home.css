@@ -96,7 +96,7 @@ font-size:18px;
 }
 .workContainer .works{
     display:flex;
-   width:80%;
+   width:60%;
    margin:auto;
    gap:20px;
 }

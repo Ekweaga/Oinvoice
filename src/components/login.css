@@ -1,0 +1,22 @@
+.login{
+    width:70%;
+    margin:auto;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.login .contact{
+    margin-top:100px;
+}
+@media screen and (max-width:540px) {
+    .login{
+        width:90%;
+        margin:auto;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .login .contact{
+        margin-top:200px;
+    }
+}

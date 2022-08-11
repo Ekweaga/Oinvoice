@@ -10,6 +10,8 @@ import lead from "./assets/sheleadsafrica.png"
 import  img from "./assets/img.jpg"
 import  ab from "./assets/ab1.jpg"
 import  con from "./assets/cons.jpeg"
+import Footer from './components/Footer'
+
 
 function Home() {
   return (
@@ -153,6 +155,9 @@ function Home() {
         <p>Send your first invoice right now (it's free!)</p>
         <div className='btn'><button>Generate Invoice</button></div>
 
+    </div>
+    <div style={{backgroundColor:'#10374A',paddingTop:'20px'}}>
+        <Footer/>
     </div>
 
     </>
