@@ -65,7 +65,7 @@ function Home() {
         <h1>Why Use O'invoice ? </h1>
         <div className="businessContainer">
             <div className="b1">
-                <img src={ab} alt="img"/>
+                <img src={ab} alt="imgs"/>
                 <div className="b1title">
                     <div style={{width:'250px'}}><h2>Small Businesses</h2>
                 <p>Businesses that adopts online invoicing gets paid 3X faster than those that don't.</p></div>
@@ -77,7 +77,7 @@ function Home() {
             </div>
 
             <div className="b2">
-            <img src={con} alt="img"/>
+            <img src={con} alt="imgs"/>
                 <div className="b1title">
                     <div style={{width:'250px'}}><h2>Large Firms</h2>
                 <p>Businesses that adopts online invoicing gets paid 3X faster than those that don't.</p></div>
@@ -87,7 +87,7 @@ function Home() {
                 </div>
                     </div>
         <div className="b3">
-        <img src={img} alt="img"/>
+        <img src={img} alt="imgs"/>
                 <div className="b1title">
                     <div style={{width:'250px'}}><h2>Freelance</h2>
                 <p>Businesses that adopts online invoicing gets paid 3X faster than those that don't.</p></div>
