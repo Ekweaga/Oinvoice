@@ -3,6 +3,13 @@ import Navbar from './components/Navbar'
 import './home.css'
 import imginvoice from './assets/invoice.jpg'
 import genuis from "./assets/autogenius.png"
+import cleaneat from "./assets/cleaneat.png"
+import print from "./assets/printhouse.png"
+import naija from "./assets/naijacarshop.png"
+import lead from "./assets/sheleadsafrica.png"
+import  img from "./assets/img.jpg"
+import  ab from "./assets/ab1.jpg"
+import  con from "./assets/cons.jpeg"
 
 function Home() {
   return (
@@ -55,14 +62,39 @@ function Home() {
     </div>
 
     <div className="business">
+        <h1>Why Use O'invoice ? </h1>
         <div className="businessContainer">
-            <div>
+            <div className="b1">
+                <img src={ab} alt="img"/>
+                <div className="b1title">
+                    <div style={{width:'250px'}}><h2>Small Businesses</h2>
+                <p>Businesses that adopts online invoicing gets paid 3X faster than those that don't.</p></div>
+                        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                <div><button className="bbtn">Join Us</button></div>
+
+                </div>
 
             </div>
-            <div>
 
+            <div className="b2">
+            <img src={con} alt="img"/>
+                <div className="b1title">
+                    <div style={{width:'250px'}}><h2>Large Firms</h2>
+                <p>Businesses that adopts online invoicing gets paid 3X faster than those that don't.</p></div>
+                        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                <div><button className="bbtn">Join Us</button></div>
+
+                </div>
                     </div>
-        <div>
+        <div className="b3">
+        <img src={img} alt="img"/>
+                <div className="b1title">
+                    <div style={{width:'250px'}}><h2>Freelance</h2>
+                <p>Businesses that adopts online invoicing gets paid 3X faster than those that don't.</p></div>
+                        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                <div><button className="bbtn">Join Us</button></div>
+
+                </div>
 
         </div>
         </div>
@@ -101,19 +133,19 @@ function Home() {
 
         <div className='customersContainer'>
             <div>
-                <h1> Join Over 400+ Happy Customers</h1>
+                <h1> Join Over 50+ Happy Customers</h1>
                 <p>Join other businesses that are creating and sending professional invoices to customers online.</p>
             </div>
             <div className="customers">
                 <div><img src={genuis} alt="img"/></div>
-                <div><img src={genuis} alt="img"/></div>
+                <div><img src={cleaneat} alt="img"/></div>
+                  <div><img src={naija} alt="img"/></div>
+                  <div><img src={print} alt="img"/></div>
                   <div><img src={genuis} alt="img"/></div>
-                  <div><img src={genuis} alt="img"/></div>
-                  <div><img src={genuis} alt="img"/></div>
-                  <div><img src={genuis} alt="img"/> <span>.......</span></div>
+                  <div><img src={lead} alt="img"/> </div>
             </div>
             <br/>
-            <div><button>Get Started Now</button></div>
+            <div><button style={{width:'200px'}}>Get Started Now</button></div>
         </div>
 
     <div className='signupContainer'>
