@@ -11,6 +11,7 @@ import  img from "./assets/img.jpg"
 import  ab from "./assets/ab1.jpg"
 import  con from "./assets/cons.jpeg"
 import Footer from './components/Footer'
+import {Link} from "react-router-dom"
 
 
 function Home() {
@@ -29,7 +30,10 @@ function Home() {
                 <div><p>Professional and Easy-to-use Online Invoicing Software for Startups, Business Owners and Freelancers.
                     </p></div>
 
-                    <div className='headerbtn'><button>Create Free Account</button></div>
+                    <div className='headerbtn'><button>
+                    <Link to="/signup" style={{color:'white',textDecoration:'none'}}>
+                    Create Free Account</Link>
+                        </button></div>
             </div>
 
 
@@ -71,8 +75,11 @@ function Home() {
                 <div className="b1title">
                     <div style={{width:'250px'}}><h2>Small Businesses</h2>
                 <p>Businesses that adopts online invoicing gets paid 3X faster than those that don't.</p></div>
-                        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-                <div><button className="bbtn">Join Us</button></div>
+                        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                <div style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
+                    <button className="bbtn" style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
+                    <Link to="/login" style={{color:'white',textDecoration:'none'}}>
+                    Join Us</Link></button></div>
 
                 </div>
 
@@ -82,9 +89,13 @@ function Home() {
             <img src={con} alt="imgs"/>
                 <div className="b1title">
                     <div style={{width:'250px'}}><h2>Large Firms</h2>
-                <p>Businesses that adopts online invoicing gets paid 3X faster than those that don't.</p></div>
-                        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-                <div><button className="bbtn">Join Us</button></div>
+                <p>Quickly and easily bill Clients for on-going or completed projects and get paid faster.</p></div>
+                        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                <div style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
+                    <button className="bbtn" style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
+                        <Link to="/login" style={{color:'white',textDecoration:'none'}}>
+                    Join Us</Link></button>
+                    </div>
 
                 </div>
                     </div>
@@ -92,9 +103,12 @@ function Home() {
         <img src={img} alt="imgs"/>
                 <div className="b1title">
                     <div style={{width:'250px'}}><h2>Freelance</h2>
-                <p>Businesses that adopts online invoicing gets paid 3X faster than those that don't.</p></div>
-                        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-                <div><button className="bbtn">Join Us</button></div>
+                <p>Online invoicing solution that can easily be connected with your website or app.</p></div>
+                        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                <div style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
+                    <button className="bbtn" style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
+                    <Link to="/login" style={{color:'white',textDecoration:'none'}}>
+                    Join Us</Link></button></div>
 
                 </div>
 

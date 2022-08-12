@@ -1,0 +1,46 @@
+main{
+    background-color: #E2E9EC;
+   
+}
+.invoiceContainer{
+   
+    background-color: #E2E9EC;
+   
+}
+.invoicBox{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    background-color: #E2E9EC;
+}
+label{
+    padding-left:10px;
+     
+
+}
+
+.invoiceapp{
+    background-color: white;
+    padding:30px;
+    width:60%;
+    margin:auto;
+}
+.form{
+    width:60%;
+    margin:auto;
+    padding-top:50px;
+}
+.gifloader{
+    height:100vh;
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+}
+
+@media screen and (max-width:768px){
+    .form{
+        width:90%;
+    }
+}

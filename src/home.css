@@ -7,6 +7,7 @@ button{
     border-radius: 30px;
 }
 
+
 .header{
     background-color: #E2E9EC;
     height:500px;
@@ -65,6 +66,7 @@ font-size:18px;
     color:white;
     padding-top:100px;
     display:flex;
+    text-align:center;
    
    
    
@@ -94,11 +96,15 @@ font-size:18px;
     font-size:16px;
     letter-spacing: 0.1rem;
 }
+.workContainer{
+    text-align:center;
+}
 .workContainer .works{
     display:flex;
    width:60%;
    margin:auto;
    gap:20px;
+   text-align:center;
 }
 .works p{
     font-size:13px;
@@ -127,6 +133,7 @@ font-size:18px;
 .signupContainer{
     background-color: #E2E9EC;
     height:500px;
+    text-align:center;
     padding-top:100px;
 }
 .signupContainer h5{
@@ -139,6 +146,7 @@ font-size:18px;
 .customersContainer{
 height:350px;
 padding:30px;
+text-align:center;
 }
 .customersContainer .customers{
     display:flex;
@@ -160,7 +168,7 @@ padding:30px;
 }
 .business .b1{
    
-    height:600px;
+    height:500px;
     width:500px;
     position:relative;
    
@@ -181,10 +189,11 @@ padding:30px;
     background: transparent;
     font-size:18px;
     width:200px;
+    margin-left:50px;
 }
 .business .b2{
    
-    height:600px;
+    height:500px;
     width:500px;
     position: relative;
  
@@ -204,7 +213,7 @@ padding:30px;
 }
 .business .b3{
    
-    height:600px;
+    height:500px;
     width:500px;
    
     background-repeat: no-repeat;
@@ -225,13 +234,18 @@ padding:30px;
 
 .business h1{
     text-align: left;
+    margin:30px;
+    font-size:30px;
 }
 .business h2{
-    font-size:16px;
+    font-size:20px;
     margin:20px;
+    font-weight: 700;
+    text-align: center;
 }
 .business p{
     font-size: 14px;
+    text-align:center;
 }
 
 @media screen and (max-width:768px) {

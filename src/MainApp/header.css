@@ -1,0 +1,29 @@
+header{
+    display: flex;
+    justify-content: space-between;
+}
+
+header ul{
+    margin: 0;
+    list-style: none;
+    display:flex;
+    gap:10px;
+    font-size:10px;
+   
+}
+header ul li:first-child button{
+    background-color: #E2E9EC;
+    border:none;
+    color:black;
+    border-radius: unset;
+}
+header ul li:nth-child(2) button{
+    background-color: green;
+    border:none;
+    border-radius: unset;
+}
+header ul li:nth-child(3) button{
+    background-color: rgb(10, 10, 56);
+    border:none;
+    border-radius: unset;
+}
