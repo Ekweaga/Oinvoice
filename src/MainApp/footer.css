@@ -1,0 +1,25 @@
+footer ul{
+    list-style: none;
+   
+}
+footer{
+    width:80%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+footer ul li{
+    list-style-type: none;
+   
+}
+
+footer ul li span{
+        font-weight:700;
+}
+
+@media screen and (max-width:768px){
+    footer{
+        width:unset;
+        margin:unset;
+    }
+}

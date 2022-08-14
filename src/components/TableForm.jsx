@@ -1,5 +1,6 @@
 import React,{useEffect} from 'react'
 import {v4 as uuidv4} from "uuid"
+import {AiOutlineDelete,AiOutlineEdit} from "react-icons/ai"
 
 function TableForm({amount,price,quantity,desc,setdescr,setquantity,setamount,setprice,list,setList}) {
 
@@ -83,8 +84,8 @@ setList(list.filter((row)=> row.id !== id))
             <td>{quantity}</td>
             <td>{price}</td>
             <td>{amount}</td>
-            <td ><button onClick={()=>deleteitem(id)}>Delete</button></td>
-            <td ><button onClick={()=>edititem(id)}>Edit</button></td>
+            <td ><AiOutlineDelete onClick={()=>deleteitem(id)}/></td>
+            <td ><AiOutlineEdit onClick={()=>edititem(id)}/></td>
         
           
            
@@ -96,6 +97,13 @@ setList(list.filter((row)=> row.id !== id))
      )
     })}
    </table>
+   <div>
+    <section style={{fontWeight:'700'}}>
+    Total Price: {list.reduce(
+                (price,item) => price + item.amount  , 0
+            )}
+    </section>
+   </div>
 </div>
 </>
   )

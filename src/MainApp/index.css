@@ -1,5 +1,7 @@
 main{
     background-color: #E2E9EC;
+    height:100vh;
+    padding:20px;
    
 }
 .invoiceContainer{
@@ -38,9 +40,20 @@ label{
     align-items:center;
     justify-content: center;
 }
-
+textarea{
+    width:100%;
+    resize: none;
+    height:250px;
+}
 @media screen and (max-width:768px){
     .form{
         width:90%;
+    }
+    .invoiceapp{
+        background-color: white;
+        padding:30px;
+        width:90%;
+        margin:auto;
+        padding:10px;
     }
 }

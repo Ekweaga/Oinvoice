@@ -2,7 +2,7 @@ import React from 'react'
 
 function Table({amount,price,desc,quantity,list}) {
   return (
-    <div>  
+   <> <div>  
     <table width="100%">
     {list.map(({id,desc,quantity,price,amount})=>{
     return(  <>
@@ -30,6 +30,14 @@ function Table({amount,price,desc,quantity,list}) {
      )
     })}
    </table></div>
+    <div>
+    <section style={{fontWeight:'700'}}>
+    Total Price: {list.reduce(
+                (price,item) => price + item.quantity *  item.price  , 0
+            )}
+    </section>
+   </div>
+   </>
   )
 }
 

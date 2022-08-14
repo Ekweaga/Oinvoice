@@ -3,7 +3,7 @@ import "./date.css"
 
 function Dates({date,invoiceno,invoicedate}) {
   return (
-    <article>
+    <article className="dates">
     <ul>
         <li>
             <span>Invoice number: {invoiceno}</span>

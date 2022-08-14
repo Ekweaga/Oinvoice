@@ -17,6 +17,7 @@ function Mainapp() {
     const [phone,setPhone] = useState('')
     const [bank,setBank] = useState('')
     const [accno,setAccno] = useState('')
+    const [accname, setaccname] = useState('')
     const [clientname,setClientname] = useState('')
     const [clientaddress,setClientaddress] = useState('')
     const [invoiceno,setInvoiceno] = useState('')
@@ -67,6 +68,7 @@ function Mainapp() {
 
    {/*your details*/}
          <MainDetails name={name} address={address}/>
+        
 
         {/*end of your details*/}
 
@@ -98,16 +100,22 @@ function Mainapp() {
                         (<div className="form">
 
                           <article className="row">
-                          <div className="form-floating mb-3 col-lg-6 sm-12">
+                          <div className="form-floating mb-3 col-lg-4 sm-12">
       <input type="text" className="form-control " id="floatingInput" placeholder="name@example.com" 
       onChange={(e)=>setName(e.target.value)} value={name}/>
       <label for="floatingInput" className="p-3" >Your Name</label>
     </div>
-    <div className="form-floating mb-3 col-lg-6 sm-12">
+    <div className="form-floating mb-3 col-lg-4 sm-12">
       <input type="email" className="form-control " id="floatingInput" placeholder="name@example.com"
       onChange={(e)=>setEmail(e.target.value)}  value={email}/>
       <label for="floatingInput" className="p-3"> Your Email address</label>
+      </div>
+                          <div className="form-floating mb-3 col-lg-4 sm-12">
+      <input type="text" className="form-control " id="floatingInput" placeholder="name@example.com" 
+      onChange={(e)=>setaccname(e.target.value)} value={accname}/>
+      <label for="floatingInput" className="p-3" >Account Name</label>
     </div>
+    
                           </article>
 
                           <article className="row">
@@ -127,10 +135,7 @@ function Mainapp() {
       <label for="floatingInput" className="p-3">Your Bank Name</label>
     </div>
                           </article>
-                          <article className="row">
-    <TableForm amount={amount} price={price} desc={description} setamount={setAmount} setprice={setPrice}
-    setdescr={setDescription} quantity={quantity} setquantity={setQuantity} list={list} setList={setList}/>
-   </article>
+                       
                     <article className="row">
                     <div className="form-floating mb-3 col-lg-4">
       <input type="number" className="form-control" id="floatingInput" placeholder="name@example.com" 
@@ -182,7 +187,7 @@ function Mainapp() {
     </div>
    
   
-   <button onClick={handle} type="button" className="btn  mt-3" style={{width:'100%', background:'#10374A' ,color:'white'}}>
+   <button onClick={handle} type="button" className="btn  mt-3" style={{width:'100%', background:'#10374A' ,color:'white',margin:'20px'}}>
       Generate Invoice</button>
    
    

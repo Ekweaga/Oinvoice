@@ -3,3 +3,10 @@ article{
     align-items: flex-end;
     justify-content: flex-end;
 }
+
+.dates ul{
+    list-style:none;
+}
+.dates ul li{
+    list-style-type: none;
+}
