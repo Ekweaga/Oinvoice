@@ -1,4 +1,5 @@
 import React,{useState,useEffect} from 'react'
+import TableForm from '../components/TableForm'
 import Clientdetails from './Clientdetails'
 import Dates from './Dates'
 import Footer from './Footer'
@@ -22,26 +23,33 @@ function Mainapp() {
     const [invoicedate,setInvoiceDate] = useState('')
     const [duedate,setDuedate] = useState('')
     const [note,setNote] = useState('')
+    const [description, setDescription] = useState('')
+     const [quantity, setQuantity] = useState('')
+      const [amount, setAmount] = useState('')
+      const [price, setPrice] = useState('')
+      const [list, setList] = useState([])
+
 
     const [loading,setLoading] = useState(true)
 
 
     const handle = ()=>{
-      if(name === "" || email === ""){
-        alert("Error")
-      }
-      else{
+     
         setshowinvoice(true)
-      }
+      
      
     }
+
+    
 
     useEffect(()=>{
       setTimeout(()=>{
         setLoading(false)
       },3000)
+
       
     })
+
   return (
 
       
@@ -73,7 +81,8 @@ function Mainapp() {
                  {/* end date*/}
 
                  {/*Table*/}
-              <Table/>
+              <Table amount={amount} price={price} desc={description} setamount={setAmount} setprice={setPrice}
+    setdescr={setDescription} quantity={quantity} setquantity={setQuantity} list={list}/>
                   {/* end of Table*/}
 
              
@@ -118,7 +127,10 @@ function Mainapp() {
       <label for="floatingInput" className="p-3">Your Bank Name</label>
     </div>
                           </article>
-                          
+                          <article className="row">
+    <TableForm amount={amount} price={price} desc={description} setamount={setAmount} setprice={setPrice}
+    setdescr={setDescription} quantity={quantity} setquantity={setQuantity} list={list} setList={setList}/>
+   </article>
                     <article className="row">
                     <div className="form-floating mb-3 col-lg-4">
       <input type="number" className="form-control" id="floatingInput" placeholder="name@example.com" 
@@ -137,7 +149,7 @@ function Mainapp() {
     </div>
     
                     </article>
-   
+                  
    <article className="row">
    <div className="form-floating mb-3 col-lg-4 ">
       <input type="date" className="form-control" id="floatingInput" placeholder="name@example.com" 
@@ -156,16 +168,23 @@ function Mainapp() {
       <label for="floatingInput" className="p-3">Due Date</label>
     </div>
    </article>
+
+   <article className="row">
+    <TableForm amount={amount} price={price} desc={description} setamount={setAmount} setprice={setPrice}
+    setdescr={setDescription} quantity={quantity} setquantity={setQuantity} list={list} setList={setList}/>
+   </article>
+
+   
   
-  
+   <div className="form-floating mb-3 ">
+      <textarea  onChange={(e)=>setNote(e.target.value)}  value={note} row="20"></textarea>
+      <label for="floatingInput">Additional Notes to clients</label>
+    </div>
+   
   
    <button onClick={handle} type="button" className="btn  mt-3" style={{width:'100%', background:'#10374A' ,color:'white'}}>
       Generate Invoice</button>
    
-    <div className="form-floating mb-3 ">
-      <textarea  onChange={(e)=>setNote(e.target.value)}  value={note}></textarea>
-      <label for="floatingInput">Email address</label>
-    </div>
    
      
     

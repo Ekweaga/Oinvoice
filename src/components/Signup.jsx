@@ -1,9 +1,50 @@
 import React,{useState} from 'react'
+import { createUserWithEmailAndPassword} from 'firebase/auth';
+import { auth } from '../firebase';
+import {Link,useHistory} from "react-router-dom"
 
 function Signup() {
+  const history = useHistory();
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [pwd, setPwd] = useState('')
+  const [error,seterror] = useState(null)
+const [success,setsuccess] = useState(null)
+
+
+  const signup = async ()=>{
+    if(email === "" || pwd === ""){
+      seterror("Fields are empty")
+    
+  
+    
+    }
+    else if(pwd.length < 6){
+      seterror("Password characters must be greater than 6")
+     
+    }
+   else{
+    try{
+      await createUserWithEmailAndPassword(auth,email,pwd).then((response)=>{
+        console.log(response.user.refreshToken)
+        localStorage.setItem('token', JSON.stringify(response.user.refreshToken))
+        
+      });
+   
+     setsuccess("Your Account is created successfully")
+    setTimeout(()=>{
+      history.replace("/login");
+    },1000)
+    
+   }
+   catch(err){
+   seterror(err.message)
+   console.log(err)
+   
+   }
+  }
+
+  }
   return (
     <div className="login">
     <div className='contact row'>
@@ -27,10 +68,15 @@ function Signup() {
       <label for="floatingPassword">Password</label>
     </div>
     </div>
-   
+    <div className="accountsignup">
+            <span>Already have an account ? <Link to="/login" style={{color:'#10374A',textDecoration:'none'}}>Login</Link></span>
+          </div>
     
-    <button  type="button" className="btn  mt-3" style={{width:'100%', background:'#10374A' ,color:'white'}}>
-      Login</button>
+    <button  type="button" className="btn  mt-3" style={{width:'100%', background:'#10374A' ,color:'white'}} onClick={signup}>
+      Submit</button>
+<br/>
+      <div style={{color:'red'}}>{error?error:null}</div>
+      <div style={{color:'green'}}>{success?success:null}</div>
     
     </div>
     </div>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import Navbar from './components/Navbar'
 import './home.css'
 import imginvoice from './assets/invoice.jpg'
@@ -12,15 +12,27 @@ import  ab from "./assets/ab1.jpg"
 import  con from "./assets/cons.jpeg"
 import Footer from './components/Footer'
 import {Link} from "react-router-dom"
+import {AiOutlineFieldTime} from 'react-icons/ai'
+import {TbBrandProducthunt} from 'react-icons/tb'
+import {GiFlatPlatform} from 'react-icons/gi'
 
 
 function Home() {
+    const [loading,setLoading] = useState(true)
+
+    useEffect(()=>{
+        setTimeout(()=>{
+          setLoading(false)
+        },2000)
+        
+      })
   return (
     <>
-    <div className='header'>
-        <div className="menu">
+     {loading ? <div className="gifloader"><div className="spinner-border text-info " role="status"></div></div>:
+    (<><div className='header'>
+        
         <Navbar/>
-        </div>
+       
 
         <div className='headerContainer '>
             <div className='headertitle'>
@@ -50,17 +62,20 @@ function Home() {
     <div className="benefitsContainer">
         <div className='benefits'>
             <div>
-                <h3>Save more time</h3>
+                <div style={{display:'flex'}}><AiOutlineFieldTime width="50px"/>  <h3>Save more time</h3></div>
+              
                 <p>Make getting paid a breeze. Our solution helps you save time on chasing payments and helps you get paid faster.
 
                 </p>
             </div>
             <div>
-            <h3>Enhance productivity</h3>
+            <div style={{display:'flex'}}><TbBrandProducthunt/><h3>Enhance productivity</h3></div>
+            
             <p>Set up automatic payment reminders to gently remind clients when a payment is coming up, due, or late.</p>
             </div>
             <div>
-            <h3>Easy to Use</h3>
+                 <div style={{display:'flex'}}><GiFlatPlatform/><h3>Easy to Use</h3></div>
+            
             <p>Set up automatic payment reminders to gently remind clients when a payment is coming up, due, or late.</p>
             </div>
         </div>
@@ -172,7 +187,9 @@ function Home() {
     </div>
     <div style={{backgroundColor:'#10374A',paddingTop:'20px'}}>
         <Footer/>
-    </div>
+    </div></>
+    )
+    }
 
     </>
   )
