@@ -182,8 +182,8 @@ function Mainapp() {
    
   
    <div className="form-floating mb-3 ">
-      <textarea  onChange={(e)=>setNote(e.target.value)}  value={note} row="20"></textarea>
-      <label for="floatingInput">Additional Notes to clients</label>
+      <textarea  onChange={(e)=>setNote(e.target.value)}  value={note} row="20" placeholder="Additional notes to clients"></textarea>
+     
     </div>
    
   

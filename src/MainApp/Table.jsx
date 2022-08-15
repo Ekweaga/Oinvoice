@@ -4,10 +4,7 @@ function Table({amount,price,desc,quantity,list}) {
   return (
    <> <div>  
     <table width="100%">
-    {list.map(({id,desc,quantity,price,amount})=>{
-    return(  <>
-       
-    <thead>
+    <thead style={{backgroundColor:'black',color:'white',padding:'10px'}}>
         <tr>
             <td>Description</td>
             <td>Qunatity</td>
@@ -15,6 +12,10 @@ function Table({amount,price,desc,quantity,list}) {
             <td>Amount</td>
         </tr>
     </thead>
+    {list.map(({id,desc,quantity,price,amount})=>{
+    return(  <>
+       
+   
 
     <tbody>
     <tr>
