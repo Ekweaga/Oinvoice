@@ -36,7 +36,7 @@ function Mainapp() {
 
     const handle = ()=>{
      
-        setshowinvoice(true)
+        setshowinvoice(!showinvoice)
       
      
     }
@@ -69,7 +69,7 @@ function Mainapp() {
    {/*your details*/}
          <MainDetails name={name} address={address}/>
         
-
+      
         {/*end of your details*/}
 
 
@@ -95,6 +95,8 @@ function Mainapp() {
                        {/*footer*/}
                      <Footer name={name} accno={accno} email={email} bank={bank} phone={phone}/>
                         {/* end footer*/}
+
+                        <div><button  onClick={handle}>Edit Invoice</button></div>
                      
                         </div></div>):
                         (<div className="form">
@@ -187,7 +189,7 @@ function Mainapp() {
     </div>
    
   
-   <button onClick={handle} type="button" className="btn  mt-3" style={{width:'100%', background:'#10374A' ,color:'white',margin:'20px'}}>
+   <button onClick={handle} type="button" className="btn  mt-3" style={{width:'100%', background:'#10374A' ,color:'white',marginTop:'20px',marginBottom:'20px'}}>
       Generate Invoice</button>
    
    
