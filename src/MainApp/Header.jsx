@@ -10,8 +10,8 @@ function Header() {
 
             <div>
                 <ul>
-                    <li><button>Print</button></li>
-                    <li><button>Download</button></li>
+                  
+                    <li><button onClick={()=>window.print()}>Download</button></li>
                     <li><button>Send</button></li>
                 </ul>
             </div>

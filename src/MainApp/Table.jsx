@@ -7,7 +7,7 @@ function Table({amount,price,desc,quantity,list}) {
     <thead style={{backgroundColor:'black',color:'white',padding:'10px'}}>
         <tr>
             <td>Description</td>
-            <td>Qunatity</td>
+            <td>Quantity</td>
             <td>Price</td>
             <td>Amount</td>
         </tr>
