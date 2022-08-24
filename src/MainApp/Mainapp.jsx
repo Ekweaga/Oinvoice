@@ -1,4 +1,4 @@
-import React,{useState,useEffect,useRef} from 'react'
+import React,{useState,useEffect} from 'react'
 import TableForm from '../components/TableForm'
 import Clientdetails from './Clientdetails'
 import Dates from './Dates'
@@ -8,10 +8,10 @@ import "./index.css"
 import MainDetails from './MainDetails'
 import Notes from './Notes'
 import Table from './Table'
-import { useReactToPrint } from 'react-to-print';
 
 
-import ReactToPrint from 'react-to-print';
+
+
 
 function Mainapp() {
             const [showinvoice,setshowinvoice] = useState(false)
@@ -36,7 +36,7 @@ function Mainapp() {
 
 
     const [loading,setLoading] = useState(true)
-    const componentRef = useRef();
+   
 
    
     const handle = ()=>{
